@@ -3,16 +3,17 @@
 
 #include <iostream>
 #include <vector>
-#include "jobs/Job.h"
+#include "strikes/Strike.h"
 
 using namespace std;
 
 class Character {
 public:
-    Character(const string &name, const Job &job);
+    Character(const string &name);
+    virtual ~Character();
 
     void sayHello();
-    void sayHelloTo(Character *target);
+    void sayHelloTo(const Character &target);
 
     int strike(Character &target, int strikeIndex);
     bool isDead();
@@ -22,13 +23,16 @@ public:
     void setName(const string &name);
     int getHealth() const;
     void setHealth(int health);
-    const Job &getJob() const;
-    void setJob(const Job &job);
+    int getLevel() const;
+    void setLevel(int level);
+    const vector<Strike *> &getStrikes() const;
+    void setStrikes(const vector<Strike *> &strikes);
 
 protected:
     string name;
     int health;
-    Job job;
+    int level;
+    vector<Strike*> strikes;
 };
 
 

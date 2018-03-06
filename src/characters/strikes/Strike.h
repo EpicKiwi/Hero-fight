@@ -10,7 +10,7 @@ public:
 
     Strike(const string &name);
 
-    virtual int getDamages();
+    virtual int getDamages() = 0;
 
     const string &getName() const;
     void setName(const string &name);

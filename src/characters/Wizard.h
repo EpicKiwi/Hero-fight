@@ -2,13 +2,11 @@
 #define HERO_FIGHT_WIZARD_H
 
 
-#include "Job.h"
+#include "Character.h"
 
-class Wizard: public Job {
-
+class Wizard : public Character {
 public:
-
-    Wizard();
+    Wizard(const string &name);
 
 };
 

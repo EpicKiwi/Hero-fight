@@ -2,11 +2,11 @@
 #define HERO_FIGHT_WARRIOR_H
 
 
-#include "Job.h"
+#include "Character.h"
 
-class Warrior : public Job {
+class Warrior : public Character {
 public:
-    Warrior();
+    Warrior(const string &name);
 };
 
 

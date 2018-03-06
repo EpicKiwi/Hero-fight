@@ -9,7 +9,3 @@ const string &Strike::getName() const {
 void Strike::setName(const string &name) {
     Strike::name = name;
 }
-
-int Strike::getDamages() {
-    return 0;
-}
